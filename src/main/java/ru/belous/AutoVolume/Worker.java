@@ -21,8 +21,8 @@ public class Worker {
         this.age = age;
     }
 
-    public Worker(){}
-    //public Worker(Work work){this.work=work;}
+   // public Worker(){}
+    public Worker(Work work){this.work=work;}
 
     public void setWork(Work work){
         this.work=work;
