@@ -7,21 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:mainProp.properties"/>
+    <context:component-scan base-package="ru.belous.AutoVolume"/>
 
-    <bean id="workBean"
-          class="ru.belous.AutoVolume.TonerWorker"
-          scope="prototype"
-          factory-method="getTonerWorker"
-    init-method="doMyInit"
-    destroy-method="doDestroy">
-    </bean>
-
-    <!--<bean id = "workerBean"
-    class="ru.belous.AutoVolume.Worker" scope="prototype">
-        <property name="work" ref="workBean"/>
-        <property name="name" value="${toner.name}"/>
-        <property name="age" value="${toner.age}"/>
-
-    </bean>-->
 </beans>

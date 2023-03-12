@@ -1,5 +1,9 @@
 package ru.belous.AutoVolume;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Worker {
     private Work work;
     private String name;
@@ -21,8 +25,9 @@ public class Worker {
         this.age = age;
     }
 
-    public Worker(){}
-    //public Worker(Work work){this.work=work;}
+    //public Worker(){}
+    @Autowired
+    public Worker(Work work){this.work=work;}
 
     public void setWork(Work work){
         this.work=work;

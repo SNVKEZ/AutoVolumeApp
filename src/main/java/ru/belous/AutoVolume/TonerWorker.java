@@ -1,5 +1,8 @@
 package ru.belous.AutoVolume;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TonerWorker implements Work {
 
     private TonerWorker(){}

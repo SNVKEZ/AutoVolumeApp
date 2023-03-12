@@ -7,10 +7,9 @@ public class TestSpring {
         ClassPathXmlApplicationContext xmlApplicationContext = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
-        TonerWorker tonerWorker = xmlApplicationContext.getBean("workBean",TonerWorker.class);
+        TonerWorker tonerWorker = xmlApplicationContext.getBean("tonerWorker",TonerWorker.class);
+        new Worker(tonerWorker).doWork();
         System.out.println(tonerWorker.getTimeWork());
-        TonerWorker tonerWorker1 = xmlApplicationContext.getBean("workBean",TonerWorker.class);
-        System.out.println(tonerWorker1.getTimeWork());
         
         // Work work = xmlApplicationContext.getBean("workBean",SoundInstall.class);
         // Worker worker = new Worker(work);
